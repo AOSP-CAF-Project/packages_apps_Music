@@ -14,13 +14,12 @@
  * the License.
  */
 
-package com.android.music.tests;
-
-import com.android.music.tests.stress.AlbumsPlaybackStress;
-import com.android.music.tests.stress.MusicPlaybackStress;
+package com.aurora.music.tests;
 
 import android.test.InstrumentationTestRunner;
 import android.test.InstrumentationTestSuite;
+
+import com.aurora.music.tests.stress.AlbumsPlaybackStress;
 
 import junit.framework.TestSuite;
 
@@ -30,7 +29,7 @@ import junit.framework.TestSuite;
  * Running all tests:
  *
  * adb shell am instrument \
- *   -w com.android.music.tests/.MusicPlayerStressTestRunner
+ *   -w com.aurora.music.tests/.MusicPlayerStressTestRunner
  */
 
 public class MusicPlayerStressTestRunner extends InstrumentationTestRunner {

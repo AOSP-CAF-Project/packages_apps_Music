@@ -1,4 +1,4 @@
--keep class com.android.music.AudioPreview {
+-keep class com.aurora.music.AudioPreview {
   public void playPauseClicked(android.view.View);
 }
 

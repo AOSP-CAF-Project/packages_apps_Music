@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-package com.android.music.tests;
+package com.aurora.music.tests;
 
 import android.app.Activity;
-import android.test.LaunchPerformanceBase;
 import android.os.Bundle;
-
-import java.util.Map;
+import android.test.LaunchPerformanceBase;
 
 /**
  * Instrumentation class for Media Player launch performance testing.
@@ -37,7 +35,7 @@ public class MusicPlayerLaunchPerformance extends LaunchPerformanceBase {
     public void onCreate(Bundle arguments) {
         super.onCreate(arguments);
 
-        mIntent.setClassName(getTargetContext(), "com.android.music.MusicBrowserActivity");
+        mIntent.setClassName(getTargetContext(), "com.aurora.music.MusicBrowserActivity");
         start();
     }
 

@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package com.android.music.tests;
+package com.aurora.music.tests;
 
 import android.test.InstrumentationTestRunner;
 import android.test.InstrumentationTestSuite;
-import com.android.music.tests.functional.TestSongs;
-import com.android.music.tests.functional.TestPlaylist;
+
+import com.aurora.music.tests.functional.TestPlaylist;
+import com.aurora.music.tests.functional.TestSongs;
 
 import junit.framework.TestSuite;
 
@@ -32,7 +33,7 @@ import junit.framework.TestSuite;
  * Running all tests:
  *
  * adb shell am instrument \
- *   -w com.android.music.tests/.MusicPlayerFunctionalTestRunner
+ *   -w com.aurora.music.tests/.MusicPlayerFunctionalTestRunner
  */
 
 public class MusicPlayerFunctionalTestRunner extends InstrumentationTestRunner {

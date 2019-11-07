@@ -14,27 +14,22 @@
  * limitations under the License.
  */
 
-package com.android.music.tests.functional;
+package com.aurora.music.tests.functional;
 
 import android.app.Activity;
-import android.content.*;
 import android.app.Instrumentation;
 import android.app.Instrumentation.ActivityMonitor;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.database.Cursor;
+import android.provider.MediaStore;
 import android.test.ActivityInstrumentationTestCase;
 import android.test.suitebuilder.annotation.LargeTest;
 import android.view.KeyEvent;
-import android.provider.MediaStore;
-import android.content.ContentResolver;
-import android.database.Cursor;
 
-import com.android.music.CreatePlaylist;
-import com.android.music.MusicUtils;
-import com.android.music.PlaylistBrowserActivity;
-import com.android.music.TrackBrowserActivity;
-
-import com.android.music.tests.MusicPlayerNames;
-import com.android.music.tests.functional.TestSongs;
+import com.aurora.music.MusicUtils;
+import com.aurora.music.PlaylistBrowserActivity;
+import com.aurora.music.tests.MusicPlayerNames;
 
 /**
  * Junit / Instrumentation test case for the PlaylistBrowserActivity
@@ -45,7 +40,7 @@ public class TestPlaylist extends ActivityInstrumentationTestCase <PlaylistBrows
     private static String TAG = "musicplayertests";
   
     public TestPlaylist() {
-        super("com.android.music",PlaylistBrowserActivity.class);
+        super("com.aurora.music",PlaylistBrowserActivity.class);
     }
 
     @Override 
@@ -84,11 +79,11 @@ public class TestPlaylist extends ActivityInstrumentationTestCase <PlaylistBrows
     public void addNewPlaylist(String playListName) throws Exception{
         Instrumentation inst = getInstrumentation();
         Activity trackBrowserActivity;
-        ActivityMonitor trackBrowserMon = inst.addMonitor("com.android.music.TrackBrowserActivity", 
+        ActivityMonitor trackBrowserMon = inst.addMonitor("com.aurora.music.TrackBrowserActivity",
                 null, false);
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_PICK);
-        intent.setClassName("com.android.music", "com.android.music.TrackBrowserActivity");
+        intent.setClassName("com.aurora.music", "com.aurora.music.TrackBrowserActivity");
         getActivity().startActivity(intent);     
         Thread.sleep(MusicPlayerNames.WAIT_LONG_TIME);
         trackBrowserActivity = trackBrowserMon.waitForActivityWithTimeout(2000);

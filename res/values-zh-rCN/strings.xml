@@ -1,29 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-/*
-** Copyright 2007, The Android Open Source Project
-**
-** Licensed under the Apache License, Version 2.0 (the "License");
-** you may not use this file except in compliance with the License.
-** You may obtain a copy of the License at
-**
-**     http://www.apache.org/licenses/LICENSE-2.0
-**
-** Unless required by applicable law or agreed to in writing, software
-** distributed under the License is distributed on an "AS IS" BASIS,
-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-** See the License for the specific language governing permissions and
-** limitations under the License.
-*/
- -->
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ Copyright (c) 2019, Aurora OSS, Last Modified 2/7/19 4:58 PM
+  ~ Copyright (C) 2007-2018, The Android Open Source Project
+  ~ Copyright (c) 2014-2018, The Linux Foundation. All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are
+  ~ met:
+  ~    * Redistributions of source code must retain the above copyright
+  ~       notice, this list of conditions and the following disclaimer.
+  ~    * Redistributions in binary form must reproduce the above
+  ~       copyright notice, this list of conditions and the following
+  ~       disclaimer in the documentation and/or other materials provided
+  ~       with the distribution.
+  ~    * Neither the name of The Linux Foundation nor the names of its
+  ~       contributors may be used to endorse or promote products derived
+  ~       from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+  ~ WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  ~ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+  ~ ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+  ~ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  ~ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  ~ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+  ~ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  ~ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+  ~ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+  ~ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
 
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="onesong" msgid="8336826100414159413">"1 首歌曲"</string>
     <!-- no translation found for Nsongs (8315784110177671046) -->
     <!-- no translation found for Nsongscomp (2294119757581588619) -->
     <!-- no translation found for Nalbums (7947176578850672205) -->
-    <string name="goto_start" msgid="8979658707407220934">"音乐库"</string>
     <string name="party_shuffle" msgid="8213359225506006168">"派对随机播放"</string>
     <string name="party_shuffle_off" msgid="1828744483354711679">"关闭派对随机播放"</string>
     <string name="clear_all_playlists">"清空播放列表"</string>
@@ -62,14 +72,11 @@
     <string name="search_title" msgid="1016971653383739344">"搜索"</string>
     <string name="no_tracks_title" msgid="8805805388271238471">"无歌曲"</string>
     <string name="no_videos_title" msgid="6218814130364793104">"无视频"</string>
-    <string name="no_playlists_title" msgid="4456351945617594418">"无播放列表"</string>
     <string name="delete_playlist_menu" msgid="8998637685583495247">"删除"</string>
     <string name="edit_playlist_menu">"编辑"</string>
     <string name="rename_playlist_menu" msgid="3133463747389494668">"重命名"</string>
     <string name="clear_all_playlists_message">"要删除所有播放列表吗?"</string>
     <string name="delete_playlist_message">"要删除“<xliff:g id="name">%s</xliff:g>”吗？"</string>
-    <string name="delete_playlist_button_ok">"确定"</string>
-    <string name="delete_playlist_button_cancel">"取消"</string>
     <string name="playlist_deleted_message" msgid="9008053828193961455">"播放列表已删除。"</string>
     <string name="playlist_renamed_message" msgid="7187580192703005990">"播放列表已重命名。"</string>
     <string name="recentlyadded" msgid="110978416756366953">"最近添加的歌曲"</string>
@@ -97,17 +104,8 @@
     <string name="repeat_current_notif" msgid="1227153936360904196">"重复播放当前歌曲。"</string>
     <string name="repeat_all_notif" msgid="6443293055987316642">"重复播放所有歌曲。"</string>
     <string name="ringtone_menu" msgid="2737472190159134599">"用作手机铃声"</string>
-    <string name="ringtone_menu_short" msgid="3367622038867238133">"用作铃声"</string>
     <string name="ringtone_set" msgid="5325818347613843130">"已将“<xliff:g id="NAME">%s</xliff:g>”设为手机铃声。"</string>
     <string name="ringtone_set_fail">"设置手机铃声失败"</string>
-    <string name="ringtone_menu_sim_name_1" msgid="2737472190159134599">"用作卡1“<xliff:g id="NAME">%s</xliff:g>”铃声"</string>
-    <string name="ringtone_menu_sim_name_2" msgid="2737472190159134599">"用作卡2“<xliff:g id="NAME">%s</xliff:g>”铃声"</string>
-    <string name="ringtone_menu_1" msgid="2737472190159134599">"用作卡1铃声"</string>
-    <string name="ringtone_menu_2" msgid="2737472190159134599">"用作卡2铃声"</string>
-    <string name="ringtone_menu_short_1" msgid="3367622038867238133">"用作卡1铃声"</string>
-    <string name="ringtone_menu_short_2" msgid="3367622038867238133">"用作卡2铃声"</string>
-    <string name="ringtone_set_1" msgid="5325818347613843130">"已将“<xliff:g id="NAME">%s</xliff:g>”设为卡1铃声。"</string>
-    <string name="ringtone_set_2" msgid="5325818347613843130">"已将“<xliff:g id="NAME">%s</xliff:g>”设为卡2铃声。"</string>
     <string name="play_selection" msgid="2854921021814550018">"播放"</string>
     <string name="add_to_playlist" msgid="7110273488645072783">"添加到播放列表"</string>
     <string name="queue" msgid="2937629819482787704">"当前的播放列表"</string>
@@ -120,20 +118,20 @@
     <string name="service_start_error_title" msgid="8649916852210198813">"播放问题"</string>
     <string name="service_start_error_msg" msgid="7061754255330276478">"无法播放此歌曲。"</string>
     <string name="service_start_error_button" msgid="480888406592240723">"确定"</string>
-  <string-array name="weeklist">
-    <item msgid="7005918873419323862">"1 周"</item>
-    <item msgid="7487749116155425822">"2 周"</item>
-    <item msgid="1565338360539555185">"3 周"</item>
-    <item msgid="2142986059836933072">"4 周"</item>
-    <item msgid="4332403875260507291">"5 周"</item>
-    <item msgid="3847281907869868565">"6 周"</item>
-    <item msgid="2942654998558867799">"7 周"</item>
-    <item msgid="2115529325850052227">"8 周"</item>
-    <item msgid="1396675336665198092">"9 周"</item>
-    <item msgid="3178819129208998649">"10 周"</item>
-    <item msgid="2727959579637914171">"11 周"</item>
-    <item msgid="8708754966127584739">"12 周"</item>
-  </string-array>
+    <string-array name="weeklist">
+        <item msgid="7005918873419323862">"1 周"</item>
+        <item msgid="7487749116155425822">"2 周"</item>
+        <item msgid="1565338360539555185">"3 周"</item>
+        <item msgid="2142986059836933072">"4 周"</item>
+        <item msgid="4332403875260507291">"5 周"</item>
+        <item msgid="3847281907869868565">"6 周"</item>
+        <item msgid="2942654998558867799">"7 周"</item>
+        <item msgid="2115529325850052227">"8 周"</item>
+        <item msgid="1396675336665198092">"9 周"</item>
+        <item msgid="3178819129208998649">"10 周"</item>
+        <item msgid="2727959579637914171">"11 周"</item>
+        <item msgid="8708754966127584739">"12 周"</item>
+    </string-array>
     <string name="weekpicker_set" msgid="7636608790418067496">"完成"</string>
     <string name="weekpicker_title" msgid="699535378922101701">"设置时间"</string>
     <string name="save_as_playlist" msgid="5180413608901885255">"另存为播放列表"</string>
@@ -160,7 +158,7 @@
     <string name="music_picker_title" msgid="4143865470317360605">"选择音乐曲目"</string>
     <string name="search_settings_description" msgid="6520975349259883368">"音乐人、专辑和曲目"</string>
     <string name="search_hint" msgid="3766854898072633001">"搜索音乐"</string>
-    <string name="search_hint_video" >"搜索视频"</string>
+    <string name="search_hint_video">"搜索视频"</string>
     <string name="fast_scroll_alphabet" msgid="5548732936480723311">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
     <string name="widget_initial_text" msgid="3166878738860903586">"触摸可选择音乐。"</string>
     <string name="effectspanel" msgid="8804547581593509614">"音效"</string>
@@ -180,7 +178,6 @@
     <string name="more_video">更多视频</string>
     <string name="equalizer_button_text">"音效"</string>
     <string name="exit_button_text">"退出"</string>
-    <string name="navigation_drawer_title">"音乐"</string>
     <string-array name="title_array_folder">
         <item>音乐人</item>
         <item>专辑</item>
@@ -196,7 +193,6 @@
     </string-array>
     <string name="no_music_found">没有歌曲</string>
     <!--  Adding new string here for file delete error message -->
-    <string name="song_deleted_error_message">无法播放您所要求的音乐文件</string>
     <string name="song_title">歌曲名称:</string>
     <string name="album_title">专辑名称:</string>
     <string name="artist_title">音乐人:</string>
@@ -205,14 +201,11 @@
     <string name="size_title">歌曲大小:</string>
     <string name="duration_unit">" 分钟"</string>
     <string name="details">详情</string>
-    <string name="favorite">收藏</string>
-    <string name="no_favorite">取消收藏</string>
     <string name="favorite_playlist">我的收藏</string>
     <string name="can_not_create_my_favorite">不能创建或覆盖“我的收藏"列表</string>
 
     <!-- add by filemanager -->
     <string name="add_by_filemanager">"从文件管理器添加"</string>
     <string name="add_file_failed">"无法添加，格式不支持或媒体库中还未扫描到此文件"</string>
-    <string name="cant_play_music_in_call">抱歉，通话中不能播放音乐</string>
 
 </resources>

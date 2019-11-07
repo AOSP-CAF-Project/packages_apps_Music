@@ -1,88 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-/*
-** Copyright 2007, The Android Open Source Project
-**
-** Licensed under the Apache License, Version 2.0 (the "License"); 
-** you may not use this file except in compliance with the License. 
-** You may obtain a copy of the License at 
-**
-**     http://www.apache.org/licenses/LICENSE-2.0 
-**
-** Unless required by applicable law or agreed to in writing, software 
-** distributed under the License is distributed on an "AS IS" BASIS, 
-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-** See the License for the specific language governing permissions and 
-** limitations under the License.
-*/
--->
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2019, Aurora OSS, Last Modified 1/7/19 7:30 PM
+  ~ Copyright (C) 2007-2018, The Android Open Source Project
+  ~ Copyright (c) 2014-2018, The Linux Foundation. All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are
+  ~ met:
+  ~    * Redistributions of source code must retain the above copyright
+  ~       notice, this list of conditions and the following disclaimer.
+  ~    * Redistributions in binary form must reproduce the above
+  ~       copyright notice, this list of conditions and the following
+  ~       disclaimer in the documentation and/or other materials provided
+  ~       with the distribution.
+  ~    * Neither the name of The Linux Foundation nor the names of its
+  ~       contributors may be used to endorse or promote products derived
+  ~       from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+  ~ WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  ~ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+  ~ ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+  ~ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  ~ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  ~ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+  ~ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  ~ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+  ~ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+  ~ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/childID"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:elevation="1dp"
     android:gravity="center_vertical"
-    android:padding="4dp"
-    android:elevation="2dp"
-    android:background="@drawable/track_list_item_group_ripple">
+    android:padding="4dp">
 
     <!-- icon is used for albumart, the grabber in edit playlist mode, and
     the playlist icon in the list of playlists -->
-    <RelativeLayout  android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:id="@+id/iconLayout"
-        android:paddingStart="16dip"
-         >
-        <ImageView android:id="@+id/icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp" />
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/album_cover_background"
+        android:layout_marginStart="8dp" />
 
     <!-- The height is set to half the height of the parent, which is 64 dip -->
-    <RelativeLayout android:layout_height="wrap_content"
+    <RelativeLayout
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/iconLayout"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_toStartOf="@+id/play_indicator_child"
-        android:paddingStart="8dip" >
-        <TextView android:id="@+id/line1"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_toEndOf="@+id/icon">
+
+        <TextView
+            android:id="@+id/line1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignWithParentIfMissing="true"
             android:layout_gravity="center_vertical"
-            android:fontFamily="sans-serif"
-            android:textSize="16sp"
-            android:maxLength="25"
-            android:textColor="#000000"
-            android:alpha="0.54"
             android:ellipsize="marquee"
-            android:singleLine="true" />
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="16sp" />
 
         <!-- The height is set to half the height of the parent, which is 64 dip -->
-        <TextView android:id="@+id/line2" android:visibility="visible"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:singleLine="true"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif"
-            android:layout_gravity="center_vertical"
-            android:textColor="#000000"
-            android:alpha="0.26"
-            android:scrollHorizontally="true"
-            android:textSize="14sp"
-            android:layout_below="@id/line1"
-            android:layout_alignWithParentIfMissing="true"
+        <TextView
+            android:id="@+id/line2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@id/line1"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="14sp"
+            android:visibility="visible" />
     </RelativeLayout>
-    <ImageView android:id="@+id/play_indicator_child"
+
+    <ImageView
+        android:id="@+id/play_indicator_child"
         style="@style/OverflowBackground"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@id/duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="10dip"
         android:src="@drawable/ic_menu_moreoverflow_normal_holo_light" />
 
 </RelativeLayout>

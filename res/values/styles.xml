@@ -1,70 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
-  Copyright (c) 2015-2016, The Linux Foundation. All rights reserved.
-
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions are
-  met:
-      * Redistributions of source code must retain the above copyright
-        notice, this list of conditions and the following disclaimer.
-      * Redistributions in binary form must reproduce the above
-        copyright notice, this list of conditions and the following
-        disclaimer in the documentation and/or other materials provided
-        with the distribution.
-      * Neither the name of The Linux Foundation nor the names of its
-        contributors may be used to endorse or promote products derived
-        from this software without specific prior written permission.
-
-  THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
-  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
-  ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
-  BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-  OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-  IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
+  ~ Copyright (c) 2019, The OneOS Project
+  ~ Copyright (C) 2007-2018, The Android Open Source Project
+  ~ Copyright (c) 2014-2018, The Linux Foundation. All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without
+  ~ modification, are permitted provided that the following conditions are
+  ~ met:
+  ~    * Redistributions of source code must retain the above copyright
+  ~       notice, this list of conditions and the following disclaimer.
+  ~    * Redistributions in binary form must reproduce the above
+  ~       copyright notice, this list of conditions and the following
+  ~       disclaimer in the documentation and/or other materials provided
+  ~       with the distribution.
+  ~    * Neither the name of The Linux Foundation nor the names of its
+  ~       contributors may be used to endorse or promote products derived
+  ~       from this software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+  ~ WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  ~ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+  ~ ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+  ~ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  ~ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  ~ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+  ~ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  ~ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+  ~ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+  ~ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="background">@color/colorBackground</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:windowDisablePreview">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="ActionBarTitle" parent="@android:style/TextAppearance.Holo.Large">
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="QueryActionBar" parent="@android:style/Widget.DeviceDefault.ActionBar">
         <item name="android:titleTextStyle">@style/ActionBarTitle</item>
     </style>
 
-    <style name="QueryTheme" parent="android:Theme.Material">
+    <style name="QueryTheme" parent="android:Theme.Material.Light.LightStatusBar">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:windowDisablePreview">true</item>
         <item name="android:actionBarStyle">@style/QueryActionBar</item>
-        <item name="android:actionBarSize">56dp</item>
-        <item name="android:statusBarColor">#ab5810</item>
     </style>
 
-    <style name="ToolbarTheme" parent="android:Theme.Material" />
+    <style name="PopupTheme" parent="ThemeOverlay.AppCompat" />
 
-    <style name="ToolbarTitleStyle" parent="android:TextAppearance.Material.Widget.Toolbar.Title">
-        <item name="android:textSize">20dp</item>
+    <style name="TextAppearance.Toolbar" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:letterSpacing">0.125</item>
     </style>
+
+    <style name="Widget.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.Toolbar</item>
+        <item name="popupTheme">@style/PopupTheme</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="android:Theme.Material.Light" />
 
     <style name="ClickBackground">
         <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
     </style>
+
     <style name="OverflowBackground">
         <item name="android:background">?android:attr/actionBarItemBackground</item>
         <item name="android:theme">@android:style/Theme.DeviceDefault.Light</item>
     </style>
 
-    <style name="CustomPopupMenu" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+    <style name="MusicProgressSliderParent">
+        <item name="android:progressDrawable">@android:color/transparent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:thumb">@drawable/slider_thumb</item>
     </style>
+
+    <style name="MusicProgressSlider" parent="MusicProgressSliderParent">
+        <item name="android:thumbOffset">0dp</item>
+    </style>
+
 
 </resources>
