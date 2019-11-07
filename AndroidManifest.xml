@@ -55,7 +55,7 @@
         android:allowTaskReparenting="true"
         android:fullBackupContent="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/app_music"
+        android:icon="@mipmap/ic_music_launcher"
         android:label="@string/musicbrowserlabel"
         android:supportsRtl="true"
         android:taskAffinity="android.task.music"

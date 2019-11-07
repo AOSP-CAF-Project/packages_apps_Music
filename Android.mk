@@ -22,8 +22,8 @@ LOCAL_RESOURCE_DIR = \
         frameworks/support/v7/appcompat/res \
         frameworks/support/coordinatorlayout/src/main/res
 
-LOCAL_PACKAGE_NAME := SnapdragonMusic
-LOCAL_OVERRIDES_PACKAGES := Music
+LOCAL_PACKAGE_NAME := Music
+LOCAL_OVERRIDES_PACKAGES := SnapdragonMusic
 LOCAL_CERTIFICATE := platform
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
